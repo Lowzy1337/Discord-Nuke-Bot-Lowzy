@@ -18,7 +18,7 @@
 
 ***
 # Preview
-![](https://cdn.discordapp.com/attachments/1067427457315110964/1103064839607308378/Screenshot_20230503-000542_Termux.jpg)
+![Es](https://cdn.discordapp.com/attachments/1067427457315110964/1103064839607308378/Screenshot_20230503-000542_Termux.jpg)
 
 ***
 
