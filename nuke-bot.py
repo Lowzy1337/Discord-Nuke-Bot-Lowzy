@@ -16,20 +16,20 @@ clear = lambda: system('cls') if os_name == 'nt' else system('clear')
 def _input(text):print(text, end='');return input()
 
 baner = f'''
- 
- {r}$$$$$\                                         
- {r}\__$$ |                                        
-   {r}$$ | $$$$$$\  {m}$$$$$$$\   $$$$$$\   $$$$$$$\ 
-   {r}$$ |$$  __$$\ {m}$$  __$$\ $$  __$$\ $$  _____|
-{r} $$\   $$ |$$ /  {m}$$ |$$ |  $$ |$$$$$$$$ |\$$$$$$\  
-{r} $$ |  $$ |$$ |  {m}$$ |$$ |  $$ |$$   ____| \____$$\ 
-{r} \$$$$$$  |\$$$$ {m}$$  |$$ |  $$ |\$$$$$$$\ $$$$$$$  |
-{r} \______/  \______/ \__|  \__| \_______|\_______/ 
+{c}--------------------------------------------
+
+      _____                                         
+  {b} |     \                                        
+  {b}  \$$$$$  ______   _______    ______    _______ 
+  {b}    | $$ /      \ |       \  /      \  /       \
+{b}__    | $$|  $$$$$$\| $$$$$$$\|  $$$$$$\|  $$$$$$$
+{b}|  \  | $$| $$  | $$| $$  | $$| $$    $$ \$$    \ 
+{b}| $$__| $$| $$__/ $$| $$  | $$| $$$$$$$$ _\$$$$$$\
+ {b}\$$    $$ \$$    $$| $$  | $$ \$$     \|       $$
+  {b}\$$$$$$   \$$$$$$  \$$   \$$  \$$$$$$$ \$$$$$$$ 
                                                   
-                                                  
-                                                                                            
-                                                  
-{y}Türkçe Yapan : Jones#0213 {g}'''
+{c}Türkçe Çeviren : Jonês#0213
+{m}Lost Code Discord : discord.gg/6U9mrWKhyc{g}'''
 
 
 
@@ -85,15 +85,15 @@ async def create_voice_channels(guild, name):
     return created
 
 async def nuke_guild(guild):
-    print(f'{r}Nuke: {m}{guild.name}')
+    print(f'{r}Sunucu: {m}{guild.name}')
     banned = await ban_all_members(guild)
-    print(f'{m}Banned:{b}{banned}')
+    print(f'{m}Banlanan Sayısı:{b}{banned}')
     deleted_channels = await delete_all_channel(guild)
-    print(f'{m}Delete Channels:{b}{deleted_channels}')
+    print(f'{m}Silinen Kanal Sayısı{b}{deleted_channels}')
     delete_roles = await delete_all_roles(guild)
-    print(f'{m}Delete Roles:{b}{delete_roles}')
+    print(f'{m}Silinen Rol Sayısı:{b}{delete_roles}')
     created_channels = await create_voice_channels(guild,name)
-    print(f'{m}Create Voice Channels:{b}{created_channels}')
+    print(f'{m}Oluşturulan Sesli Kanal Sayısı:{b}{created_channels}')
     #created_roles = await created_roles(guild,name)
     #print(f'{m}Create Roles:{b}{created_roles}')
     print(f'{r}--------------------------------------------\n\n')
@@ -151,5 +151,5 @@ while True:
                 input(f'{r}{error}\n{b}Press enter for return...')
             continue
     elif choice == '2':
-        print(f'{dr}Exit...')
+        print(f'{dr}Çıkış...')
         exit()
