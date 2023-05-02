@@ -1,10 +1,11 @@
 # Simple Discord Nuke Bot Edit By Lowzy
+# Türkçe Dilinine Çevrildi [Translated into Turkish]
 
 * Python 3.6 - 3.8
 
 ***
 
-# Özellikleei
+# Özellikleri
 
  - [x] Kanal Silme
 
@@ -28,13 +29,15 @@
 
 ```console
 
-apt update && apt upgrade
+apt update
+
+apt upgrade
 
 pkg install python git
 
 git clone https://github.com/Lowzy1337/Discord-Nuke-Bot
 
-cd Discord-Nuke-Bot
+cd Discord-Nuke-Bot-Lowzy
 
 python -m pip install -r requirements.txt
 
@@ -58,7 +61,7 @@ python nuke-bot.py
 
 git clone https://github.com/Lowzy1337/Discord-Nuke-Bot
 
-cd Discord-Nuke-Bot
+cd Discord-Nuke-Bot-Lowzy
 
 python -m pip install -r requirements.txt
 
