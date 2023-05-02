@@ -1,10 +1,10 @@
-# Simple Discord Nuke Bot
+# Simple Discord Nuke Bot Edit By Lowzy
 
 * Python 3.6 - 3.8
 
 ***
 
-# Features
+# Özellikleei
 
  - [x] Kanal Silme
 
@@ -16,13 +16,9 @@
 
  - [ ] Rol Kurma [Yakında]
 
-***
 
-# Preview
 
-***
-
-# Installation:
+# Kurulum:
 
 ## Android(Termux):
 
@@ -32,7 +28,7 @@ apt update && apt upgrade
 
 pkg install python git
 
-git clone https://github.com/Sigma-cc/Discord-Nuke-Bot
+git clone https://github.com/Lowzy1337/Discord-Nuke-Bot
 
 cd Discord-Nuke-Bot
 
@@ -42,7 +38,7 @@ python nuke-bot.py
 
 ```
 
-**[Subsequent launches]**
+**[Sonraki lansmanlar]**
 
 ```console
 
@@ -56,7 +52,7 @@ python nuke-bot.py
 
 ```console
 
-git clone https://github.com/
+git clone https://github.com/Lowzy1337/Discord-Nuke-Bot
 
 cd Discord-Nuke-Bot
 
@@ -67,7 +63,3 @@ python3 nuke-bot.py
 ```
 
 ***
-
-# Running
-
-It's that simple! Enter the command `python nuke-bot.py` or `python3 nuke-bot.py` and the nuke bot interface will launch.
